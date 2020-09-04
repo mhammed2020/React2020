@@ -17,45 +17,56 @@ class Product extends Component {
         : "badge badge-primary m-2" ;
      }
 // 1 method
-    //  renderNames() {
-    //      if (this.state.names.length === 0) {
-    //         return <h2>No Names </h2> ;
-    //      } 
-    //      return ( 
-    //         <ul>
-    //         {this.state.names.map(name => (
-    //         <li  key ={name} > {name} </li>
-    //         ))}
-           
-    //     </ul> 
-    //     );
-         
-    //  }
-    render() { 
-
-      
-        //const styles = {color:"blue"}
-
-    
-        return (
-        <div>
-            {/* 2 method */}
-{this.state.names.length === 0 && <h3> no names </h3> }
-         <ul>
+     renderNames() {
+         if (this.state.names.length === 0) {
+            return <h2>No Names </h2> ;
+         } 
+         return ( 
+            <ul>
             {this.state.names.map(name => (
             <li  key ={name} > {name} </li>
             ))}
            
         </ul> 
+        );
+         
+     }
+
+constructor(){
+         super();
+         //1.rebind this
+
+         this.click_handler = this.click_handler.bind(this);
+     }
+
+     click_handler() {
+         console.log(this) ;
+     }
+
+    render() { 
+
+      
+
+    
+        return (
+        <div>
+            {/* 2 method */}
+{/* {this.state.names.length === 0 && <h3> no names </h3> }
+         <ul>
+            {this.state.names.map(name => (
+            <li  key ={name} > {name} </li>
+            ))}
+           
+        </ul>  */}
 
 
 
-            {/* <img src={this.state.imgURL} alt=""/>
+            <img src={this.state.imgURL} alt=""/>
            <span>  {this.state.name} </span>
            <span className = {this.get_classes()}>{this.state.count }</span>
       
-       */}
-
+      
+  <button onClick ={this.click_handler} className ="btn btn-primary btn-sm "> + </button>
     
         </div>
         );
