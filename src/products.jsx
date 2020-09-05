@@ -32,16 +32,25 @@ class Product extends Component {
          
      }
 
-constructor(){
-         super();
-         //1.rebind this
 
-         this.click_handler = this.click_handler.bind(this);
+     //rebind using constractor
+// constructor(){
+//          super();
+//          //1.rebind this
+
+//          this.click_handler = this.click_handler.bind(this);
+//      }
+
+
+//2.rebind using arrow this =>
+     click_handler_INCRMT = () => {
+         this.setState({count:this.state.count +1 }) ;
      }
 
-     click_handler() {
-         console.log(this) ;
-     }
+     click_handler_DCRMT = () => {
+        this.setState({count:this.state.count - 1 }) ;
+    }
+
 
     render() { 
 
@@ -66,8 +75,9 @@ constructor(){
            <span className = {this.get_classes()}>{this.state.count }</span>
       
       
-  <button onClick ={this.click_handler} className ="btn btn-primary btn-sm "> + </button>
-    
+  <button onClick ={this.click_handler_INCRMT} className ="btn btn-primary btn-sm "> + </button>
+  <button onClick ={this.click_handler_DCRMT} className ="btn btn-primary btn-sm "> - </button>
+
         </div>
         );
     }
