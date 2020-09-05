@@ -48,13 +48,11 @@ class Product extends Component {
      };
 
 
-     increment = () => {
-this.click_handler_INCRMT(2) ;
-     };
+//      increment = () => {
+// this.click_handler_INCRMT(2) ;
+//      };
 
-     click_handler_DCRMT = () => {
-        this.setState({count:this.state.count - 1 }) ;
-    };
+
 
 
     render() { 
@@ -80,8 +78,11 @@ this.click_handler_INCRMT(2) ;
            <span className = {this.get_classes()}>{this.state.count }</span>
       
       
-  <button onClick ={this.increment} className ="btn btn-primary btn-sm "> + </button>
-  <button onClick ={this.click_handler_DCRMT} className ="btn btn-primary btn-sm "> - </button>
+  <button 
+  onClick = {() => this.click_handler_INCRMT(2)} 
+  className ="btn btn-primary btn-sm ">
+       + 
+       </button>
 
         </div>
         );
