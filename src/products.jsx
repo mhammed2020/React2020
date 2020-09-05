@@ -43,13 +43,18 @@ class Product extends Component {
 
 
 //2.rebind using arrow this =>
-     click_handler_INCRMT = () => {
-         this.setState({count:this.state.count +1 }) ;
-     }
+     click_handler_INCRMT = num => {
+         this.setState({count:this.state.count + num }) ;
+     };
+
+
+     increment = () => {
+this.click_handler_INCRMT(2) ;
+     };
 
      click_handler_DCRMT = () => {
         this.setState({count:this.state.count - 1 }) ;
-    }
+    };
 
 
     render() { 
@@ -75,7 +80,7 @@ class Product extends Component {
            <span className = {this.get_classes()}>{this.state.count }</span>
       
       
-  <button onClick ={this.click_handler_INCRMT} className ="btn btn-primary btn-sm "> + </button>
+  <button onClick ={this.increment} className ="btn btn-primary btn-sm "> + </button>
   <button onClick ={this.click_handler_DCRMT} className ="btn btn-primary btn-sm "> - </button>
 
         </div>
