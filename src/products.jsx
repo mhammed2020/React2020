@@ -32,31 +32,15 @@ class Product extends Component {
          
      }
 
-
-     //rebind using constractor
-// constructor(){
-//          super();
-//          //1.rebind this
-
-//          this.click_handler = this.click_handler.bind(this);
-//      }
-
-
-//2.rebind using arrow this =>
-     click_handler_INCRMT = num => {
-         this.setState({count:this.state.count + num }) ;
+     click_handler_INCRMT = () => {
+         this.setState({count:this.state.count + 1 }) ;
      };
-
-
-//      increment = () => {
-// this.click_handler_INCRMT(2) ;
-//      };
 
 
 
 
     render() { 
-
+console.log(this.props);
       
 
     
@@ -79,7 +63,7 @@ class Product extends Component {
       
       
   <button 
-  onClick = {() => this.click_handler_INCRMT(2)} 
+  onClick = {this.click_handler_INCRMT} 
   className ="btn btn-primary btn-sm ">
        + 
        </button>
