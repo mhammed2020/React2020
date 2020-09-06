@@ -3,10 +3,9 @@ import React, { Component } from 'react'
 
 class Product extends Component {
     state = { 
-     name:"Burger",
-     count: 3,
-     imgURL: "logo192.png",
-     names :  ["jedou","saber","ali"]
+     name:this.props.product.name,
+     count: this.props.product.count
+    
 
      };
 
