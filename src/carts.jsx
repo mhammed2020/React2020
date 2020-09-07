@@ -15,9 +15,8 @@ products :[
            <React.Fragment>
         <h2> Shopping cart</h2> 
        {this.state.products.map(product => (
-       <Product key ={product.id} product =  {product} >
-<h4> {product.id}</h4>
-           </Product>
+       <Product key ={product.id} product =  {product} />
+
        
        ))}
 

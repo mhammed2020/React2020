@@ -42,13 +42,18 @@ class Product extends Component {
       
 
         return (
-        <div>
+      
     
-           <span>  {this.state.name} </span>
-           <span className = {this.get_classes()}>{this.state.count }</span>
-      
-      
-  <button 
+    <div className="row">
+       
+        <div className="col-2">
+        <span>  {this.state.name} </span>
+        </div>
+
+        <div className="col">
+            
+        <span className = {this.get_classes()}>{this.state.count }</span>
+        <button 
   onClick = {this.click_handler_INCRMT} 
   className ="btn btn-primary btn-sm ">
        + 
@@ -57,7 +62,16 @@ class Product extends Component {
 
          <i className="fas fa-trash m-2"></i>
      </span>
+
+
         </div>
+
+
+    </div>
+      
+      
+ 
+    
         );
     }
 }
