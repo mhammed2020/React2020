@@ -58,7 +58,7 @@ class Product extends Component {
   className ="btn btn-primary btn-sm ">
        + 
        </button>
-     <span>
+     <span onClick={ () => this.props.onDelete(this.props.product)}>
 
          <i className="fas fa-trash m-2"></i>
      </span>

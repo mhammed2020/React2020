@@ -10,12 +10,27 @@ products :[
 ]
 
     };
+
+handeleDelete = (product) => {
+//clone , edit and setState
+const newProducts = this.state.products.filter(p => p.id !== product.id);
+this.setState({products:newProducts});
+
+};
+
+
+
     render() { 
         return ( 
            <React.Fragment>
         <h2> Shopping cart</h2> 
        {this.state.products.map(product => (
-       <Product key ={product.id} product =  {product} />
+       <Product 
+       key ={product.id} 
+       onDelete ={this.handeleDelete} 
+        product =  {product} 
+        
+        />
 
        
        ))}
