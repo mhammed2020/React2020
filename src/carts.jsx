@@ -30,6 +30,22 @@ handeleReset = () => {
  this.setState({products});
 };
 
+//handelincrmnt
+
+
+click_handler_INCRMT = product => {
+
+//clone edit set
+const products = [...this.state.products]
+const index = products.indexOf(product) ;
+products[index] = {...products[index]} ; 
+
+products[index].count++ ;
+
+this.setState({products});
+};
+
+
     render() { 
         return ( 
            <React.Fragment>
@@ -38,10 +54,12 @@ handeleReset = () => {
         onClick={this.handeleReset}  
         className="btn btn-secondary btn-sm m-2">Reset</button>
        {this.state.products.map(product => (
+       
        <Product 
        key ={product.id} 
+       product =  {product} 
        onDelete ={this.handeleDelete} 
-        product =  {product} 
+       onIncrement = {this.click_handler_INCRMT}
         
         />
 

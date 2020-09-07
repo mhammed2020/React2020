@@ -18,10 +18,6 @@ class Product extends Component {
 // 1 method
 
 
-     click_handler_INCRMT = () => {
-         this.setState({count: this.props.product.count + 1 }) ;
-     };
-
 
 
 
@@ -41,7 +37,7 @@ class Product extends Component {
             
         <span className = {this.get_classes()}>{this.props.product.count }</span>
         <button 
-  onClick = {this.click_handler_INCRMT} 
+  onClick  =  { () => this.props.onIncrement(this.props.product)} 
   className ="btn btn-primary btn-sm ">
        + 
        </button>
