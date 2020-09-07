@@ -39,24 +39,11 @@ class Product extends Component {
 
 
     render() { 
-console.log(this.props);
       
 
-    
         return (
         <div>
-            {/* 2 method */}
-{/* {this.state.names.length === 0 && <h3> no names </h3> }
-         <ul>
-            {this.state.names.map(name => (
-            <li  key ={name} > {name} </li>
-            ))}
-           
-        </ul>  */}
-
-
-
-            <img src={this.state.imgURL} alt=""/>
+    
            <span>  {this.state.name} </span>
            <span className = {this.get_classes()}>{this.state.count }</span>
       
@@ -66,7 +53,10 @@ console.log(this.props);
   className ="btn btn-primary btn-sm ">
        + 
        </button>
+     <span>
 
+         <i className="fas fa-trash m-2"></i>
+     </span>
         </div>
         );
     }
