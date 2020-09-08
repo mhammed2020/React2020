@@ -72,6 +72,18 @@ class App extends Component {
 
 <Switch>
 
+<Route path="/cart" render={props => (
+
+<ShoppingCart 
+       products = {this.state.products}
+       onIncrement = {this.click_handler_INCRMT}
+       onDelete = {this.handeleDelete}
+       onReset = {this.handeleReset}
+{...props}
+/>
+        )}
+
+/>
 <Route path="/about" component={About}/>
 <Route path="/contact" component={Contact}/>
 <Route path="/"  component={Home}/>
