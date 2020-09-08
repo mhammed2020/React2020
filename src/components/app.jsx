@@ -1,6 +1,13 @@
 import React, { Component } from 'react'
+
+import {Route,Switch} from "react-router-dom";
+
+
 import NavBar from './navbar'
 import ShoppingCart from './carts'
+import About from './about';
+import Contact from './contact';
+import Home from './home';
 
 class App extends Component {
    
@@ -59,14 +66,28 @@ class App extends Component {
 <React.Fragment>
 
     <NavBar productsCount = {this.state.products.filter(p => p.count > 0).length} />
+   
+   
     <main className="container">
-        <ShoppingCart products = {this.state.products}
+
+<Switch>
+
+<Route path="/about" component={About}/>
+<Route path="/contact" component={Contact}/>
+<Route path="/"  component={Home}/>
+
+</Switch>
+
+        {/* <ShoppingCart
+        
+        products = {this.state.products}
         onIncrement = {this.click_handler_INCRMT}
         onDelete = {this.handeleDelete}
         onReset = {this.handeleReset}
-        
-        
-        />
+
+        /> */}
+
+
     </main>
 </React.Fragment>
 
