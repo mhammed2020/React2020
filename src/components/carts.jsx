@@ -4,7 +4,26 @@ import Product from './products'
 class ShoppingCart extends Component {
    
 
+//uusing constractor
+
+constructor(props) {
+    super(props);
+    console.log("Shopping cart ==> Constractor");
+}
+
+//calling backend server 
+componentDidMount(){
+
+    console.log("Shopping cart ==> component didmount");
+
+
+}
+
+
     render() { 
+
+        console.log("Shopping cart ==> render");
+
         return ( 
            <React.Fragment>
         <h2> Shopping cart</h2> 

@@ -23,6 +23,8 @@ class Product extends Component {
 
     render() { 
       
+        console.log(" product ==> render");
+
 
         return (
       

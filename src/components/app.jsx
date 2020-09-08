@@ -8,7 +8,7 @@ class App extends Component {
     state = {  
         products :[
             {id:1,name:"Burger",count :2},
-            {id:2,name:"Fries",count :0},
+            {id:2,name:"Fries",count :3},
             {id:3,name:"Cola",count :3}
         ]
         
