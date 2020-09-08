@@ -15,7 +15,6 @@ import "../node_modules/@fortawesome/fontawesome-free/css/all.css";
 
 ReactDOM.render(
 <BrowserRouter>
-
 <App/>
 
 </BrowserRouter>
