@@ -19,6 +19,13 @@ componentDidMount(){
 
 }
 
+componentDidUpdate(prevProps,prevState) {
+
+    console.log("Shopping cart ==> component didUpdate");
+    console.log(prevProps)
+
+}
+
 
     render() { 
 
