@@ -17,7 +17,11 @@ class Product extends Component {
      }
 // 1 method
 
+componentWillMount() {
+    console.log(" product ==> componentWillMount");
 
+
+}
 
 
 
